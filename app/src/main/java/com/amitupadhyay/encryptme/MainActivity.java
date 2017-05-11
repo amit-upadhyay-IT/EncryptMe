@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setSimpleMessage()
     {
-        simpleMessage.setText("AmitUpadhyay");
+        simpleMessage.setText("Normal Message: AmitUpadhyay");
     }
 
     private void doEncryption()
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             encryptedMsg = AESCrypt.encrypt(mykey, message);
-            encryptMessage.setText(encryptedMsg);
+            encryptMessage.setText("Encrypted Message: "+encryptedMsg);
         }catch (GeneralSecurityException e){
             encryptMessage.setText("general security message");
             //handle error
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         String mykey = "password";
         try {
             String messageAfterDecrypt = AESCrypt.decrypt(mykey, encryptedMsg);
-            decryptMessage.setText(messageAfterDecrypt);
+            decryptMessage.setText("After Decrypt: "+messageAfterDecrypt);
         }catch (GeneralSecurityException e){
             //handle error - could be due to incorrect password or tampered encryptedMsg
             decryptMessage.setText("general security exception");
