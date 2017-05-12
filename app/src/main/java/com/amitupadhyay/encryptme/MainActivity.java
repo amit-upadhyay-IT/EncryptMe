@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doEncryption()
     {
-        String mykey = "password";
+        String mykey = "mykey123";
         String message = "AmitUpadhyay";
 
         try {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doDecryptMessage()
     {
-        String mykey = "password";
+        String mykey = "mykey123";
         try {
             String messageAfterDecrypt = AESCrypt.decrypt(mykey, encryptedMsg);
             decryptMessage.setText("After Decrypt: "+messageAfterDecrypt);
